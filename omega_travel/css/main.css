@@ -1,0 +1,675 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: auto;
+}
+
+/* SEP:  --- HEADER --- */
+
+header {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 1fr 5fr 1fr;
+    height: 100vh;
+    background: url('../img/header_background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+.header-navbar {
+    grid-area: 2 / 2 / 1 span / 1 span;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 15px repeat(10, 1fr) 15px;
+    background: white;
+    border-radius: 10px;
+}
+
+.header-navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    grid-area: 1 / 2 / 1 span / 3 span;
+    align-self: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.header-navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-items: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: Arial;
+    grid-area: 1 / 5 / 1 span / 5 span;
+}
+
+.header-navbar li {
+    text-transform: uppercase;
+    padding: calc(3rem - 9px) 1vw;
+}
+
+.header-navbar li:hover {
+    border-bottom: 5px solid #ED093E;
+}
+
+.header-navbar li:hover a {
+    color: #ED093E;
+}
+
+.header-navbar #button-ttu {
+    grid-area: 1 / 11 / 1 span / 1 span;
+    width: 8vw;
+}
+
+.welcome-text,
+.header-button {
+    display: grid;
+    justify-self: center;
+    align-content: center;
+}
+
+.welcome-text {
+    text-align: center;
+    grid-area: 4 / 2 / 4 span / auto;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+.welcome-text h3 {
+    font-size: 44px;
+}
+
+.welcome-text h1 {
+    font-size: 100px;
+}
+
+.header-button {
+    grid-area: 8 / 2 / 1 span / auto;
+}
+
+.header-button button {
+    height: 57px;
+    width: 184px;
+}
+
+
+/* SEP:  --- SECTION ---  SEP: ABOUT US */
+
+section {
+    display: grid;
+    justify-content: center;
+}
+
+.about {
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    height: 75vh;
+    width: 85vw;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 60% 40%;
+}
+
+.about-text {
+    grid-area: 1 / 1 / auto / auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h1 {
+    font-size: 70px;
+}
+
+.about-text h3 {
+    font-family: 'PT Serif';
+    font-weight: 200;
+    color: #727272;
+    font-size: 22px;
+    border-bottom: 5px solid #D31F49;
+    padding-bottom: 3vh;
+}
+
+.about-text p {
+    margin-top: 3vh;
+    font-size: 16px;
+}
+
+.about .images {
+    display: flex;
+    position: relative;
+    grid-area: 1 / 2 / auto / auto;
+}
+
+.about .images #about_back {
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+.about .images #about_front {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+
+.about #about-btn {
+    grid-area: 2 / 1 / auto / auto;
+}
+
+/* SEP:  --- ASIDE ---  SEP: SUBSCRIBE FORM */
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EE2655;
+    height: 25vh;
+    font-family: 'PT Serif', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+
+}
+
+.subscribe-form em {
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.subscribe-form #inp-mail {
+    background-color: #F85B80;
+    color: white;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    width: 40vw;
+    height: 6vh;
+    padding-left: 10px;
+}
+
+/* SEP:  --- SECTION ---  SEP: SERVICES */
+
+#section-services {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 10% 80% 10%;
+    height: 60vh;
+    background-color: #F7F7F7;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+.services-above {
+    grid-area: 1 / 2 / auto / auto;
+    align-self: center;
+    text-align: center;
+}
+
+.services-above h1 {
+    font-size: 69px;
+    font-weight: 300;
+}
+
+.services-above h2 {
+    font-size: 21px;
+    font-family: 'PT Serif', Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: #727272;
+}
+
+.services-below {
+    grid-area: 2 / 2 / auto / auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vw;
+}
+
+.services-below h3 {
+    font-size: 32px;
+    padding-bottom: 2vh;
+    font-weight: 200;
+}
+
+.services-below p {
+    padding-top: 2vh;
+    font-size: 16px;
+    text-overflow: clip;
+}
+
+/* SEP:  --- SECTION ---  SEP: SPECIAL OFFERS */
+
+#special-offers,
+.offers-container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#special-offers {
+    height: 200vh;
+    grid-template-rows: 25% 70% 5%;
+    grid-template-columns: 10% 80% 10%;
+    background-image: url('../img/spOffers_background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: -20%;
+    margin-bottom: 20vh;
+}
+
+.offers-head {
+    grid-area: 1 / 2 / 1 span / 1 span;
+    font-size: 70px;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.offers-head .line {
+    position: absolute;
+    left: 43%;
+}
+
+.offers-head .bottom-line {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.offers-head .bottom-line i {
+    margin: 0 20px 0 20px;
+    color: #D31F49;
+}
+
+.offers-container {
+    height: 100%;
+    grid-area: 2 / 2 / 1 span / 1 span;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.offers-container .long-block {
+    grid-row: 1;
+    grid-column: 2 span;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: url('//picsum.photos/1000/500?random') no-repeat;
+    background-size: cover;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.lb-item {
+    grid-area: 1 / 2 / 1 span / 1 span;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+.lb-item span {
+    font-size: 68px;
+}
+
+.lb-item h2 {
+    font-size: 22px;
+    font-style: italic;
+    color: #727272;
+    font-weight: 200;
+}
+
+.lb-item b {
+    color: #ED2E59;
+    font-size: 28px;
+}
+
+.lb-item p {
+    margin: 0 0 30px 30px;
+}
+
+.lb-item .line {
+    height: 2px;
+    margin: 20px 0 20px 0;
+}
+
+.offers-container .normal-block {
+    grid-row: 2;
+    grid-column: 1 span;
+    background: url('//picsum.photos/1000/500');
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.block-description {
+    grid-row: 3 / auto / 1 span / 1 span;
+    height: 100%;
+
+}
+
+.block-description .lb-item {
+    background: none;
+    align-items: flex-start;
+}
+
+.block-description .lb-item p {
+    margin: 0;
+}
+
+.block-description .lb-item span {
+    font-size: 46px;
+}
+
+.offers-foot {
+    grid-area: 3 / 2 / 1 span / 1 span;
+}
+
+/* SEP:  --- SECTION --- SEP: REVIEWS */
+
+#reviews {
+    display: grid;
+    height: 60vh;
+    background: url('../img/reviews_bg.png');
+    background-size: cover;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+.reviews-arrow-l,
+.reviews-arrow-r {
+    font-size: 3em;
+}
+
+.reviews-arrow-l {
+    grid-area: 2 / 1 / auto / auto;
+}
+
+.reviews-arrow-r {
+    grid-area: 2 / 3 / auto / auto;
+}
+
+.reviews-head {
+    grid-area: 1 / 2 / auto / auto;
+}
+
+.reviews-head h1 {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.reviews-head h3 {
+    font-family: 'PT Serif', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.reviews-head,
+.reviews-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-bottom {
+    grid-area: 2 / 2 / auto / auto;
+}
+
+.reviews-bottom h2,
+.reviews-head h3,
+.reviews-bottom span {
+    font-family: 'PT Serif', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.reviews-bottom h2 {
+    color: #FFE200;
+    font-size: 46px;
+}
+
+.reviews-bottom p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.reviews-bottom span {
+    font-size: 20px;
+}
+
+
+/* SEP:  --- SECTION --- SEP: BLOG */
+
+#blog {
+    height: 100vh;
+    width: 80vw;
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 30px;
+    object-fit: cover;
+    margin-left: 10vw;
+    margin-bottom: 25vh;
+}
+
+.blog-head {
+    grid-area: 1 / 1 / 1 span / 3 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-head .line {
+    margin-top: 10%;
+}
+
+.blog-head h1 {
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+.blog-head h3 {
+    font-family: 'PT Serif', serif;
+    font-size: 22px;
+    color: #727272;
+    font-style: italic;
+    font-weight: 300;
+}
+
+#blog img {
+    grid-row: 1 span;
+    grid-column: 1 span;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 5px #686868);
+    border-radius: 10px;
+
+}
+
+article {
+    grid-column: 1 span;
+}
+
+article h4,
+article p {
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+article h4 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+article .line {
+    height: 2px;
+    margin: 10px 0 10px 0;
+}
+
+
+.blog-foot {
+    grid-area: 4 / 1 / 1 span / 3 span;
+}
+
+/* SEP:  --- ASIDE --- SEP: CONTACTS */
+
+
+#contacts {
+    background-color: #EE2655;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.l-side,
+address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.l-side {
+    grid-area: 1 / 1 / 2 span / 1 span;
+    margin-left: 10vw;
+}
+
+#contacts .line {
+    background-color: white;
+    margin: 25px 0 25px 0;
+}
+
+.l-side h1 {
+    font-size: 70px;
+}
+
+.l-side p {
+    font-family: 'PT Serif', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 5vh;
+}
+
+.l-side .btn-red {
+    background: white;
+    color: #EE2655;
+    width: 7em;
+    height: 3em;
+}
+
+address {
+    grid-area: 1 / 2 / 1 span / 1 span;
+}
+
+address h4 {
+    font-size: 32px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.conacts-icons {
+    grid-area: 2 / 2 / 1 span / 1 span;
+}
+
+/* SEP:  --- FOOTER --- */
+
+footer {
+    height: 10vh;
+    background-color: #D51945;
+    color: white;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 20px 0 20px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+}
+
+.rights {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+/* SEP:  --- BUTTONS | OTHER --- */
+
+
+.btn-red {
+    background-color: #D31F49;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 2px #A20000;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+.btn-purp-outline {
+    background: none;
+    border: 2px solid #D31F49;
+    color: #D31F49;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 14vw;
+    height: 7vh;
+}
+
+.btn-white-outline {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    width: 15vw;
+    height: 6vh;
+    margin-left: 10px;
+}
+
+.line {
+    width: 75px;
+    height: 5px;
+    background-color: #ED093E;
+}
+
+.gray-line {
+    width: 100px;
+    height: 2px;
+    background-color: #A5A5A5;
+}

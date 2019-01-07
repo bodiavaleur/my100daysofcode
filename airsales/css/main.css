@@ -1,0 +1,58 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #F3F7FA;
+}
+
+#airsales button {
+  background-color: #FF6D00;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #D64D08;
+  -webkit-transition: 0.2s background-color ease;
+  transition: 0.2s background-color ease;
+}
+
+#airsales button:hover {
+  background-color: #FF8124;
+}
+
+#airsales #avs_root {
+  -webkit-transition: 0.3s -webkit-box-shadow ease-in-out;
+  transition: 0.3s -webkit-box-shadow ease-in-out;
+  transition: 0.3s box-shadow ease-in-out;
+  transition: 0.3s box-shadow ease-in-out, 0.3s -webkit-box-shadow ease-in-out;
+}
+
+#airsales #avs_root:hover {
+  -webkit-box-shadow: 0 0 10px #c7c7c7;
+          box-shadow: 0 0 10px #c7c7c7;
+}
+
+#airsales .avs_date {
+  color: #8B9497;
+}
+
+#airsales .avs_stops {
+  color: #8B9497;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#filter {
+  -webkit-box-shadow: 0 0 10px #e8e8e8;
+          box-shadow: 0 0 10px #e8e8e8;
+}
+
+#filter li {
+  border: none;
+  -webkit-transition: 0.2s background-color ease-in;
+  transition: 0.2s background-color ease-in;
+}
+
+#filter li:hover {
+  background-color: #F1FCFF;
+}
+/*# sourceMappingURL=main.css.map */

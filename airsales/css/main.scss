@@ -1,0 +1,52 @@
+html,
+body {
+    padding:0;
+    margin: 0;
+    height: 100%;
+    background-color: #F3F7FA;
+}
+
+#airsales {
+    button {
+        background-color: #FF6D00;
+        color: white;
+        border: none;
+        border-bottom: 2px solid #D64D08;
+        transition: 0.2s background-color ease;
+
+        &:hover {
+            background-color: #FF8124;
+        }
+    }
+
+    #avs_root {
+        transition: 0.3s box-shadow ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 10px #c7c7c7;
+        }
+    }
+
+    .avs_date {
+        color: #8B9497;
+    }
+
+    .avs_stops {
+        color: #8B9497;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}
+
+#filter {
+    box-shadow: 0 0 10px #e8e8e8;
+    
+    li {
+        border:none;
+        transition: 0.2s background-color ease-in;
+
+        &:hover {
+            background-color: #F1FCFF;
+        }
+    }
+}
