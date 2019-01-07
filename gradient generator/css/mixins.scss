@@ -1,0 +1,23 @@
+@mixin flexgrid($type, $j-content, $a-items) {
+    @if ($type==flex) {
+        display: flex;
+    }
+
+    @else {
+        display: grid;
+    }
+
+    justify-content: $j-content;
+    align-items: $a-items;
+}
+
+@mixin font($type) {
+    font-family: $type, Arial, Helvetica, sans-serif;
+}
+
+@mixin line($height, $width) {
+    height: $height;
+    width: $width;
+    background-color: #ccc;
+    border-radius: 1px;
+}

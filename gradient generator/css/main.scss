@@ -1,0 +1,189 @@
+@import 'reset';
+@import 'mixins';
+@import 'colors';
+
+
+%box-style {
+    border-radius: 30px;
+    box-shadow: 0 0 30px 5px $box-shadow;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include flexgrid(grid, center, center);
+}
+
+main {
+    display: grid;
+
+    grid: {
+        template-rows: 15% 75% 10%;
+        template-columns: 70% 30%;
+    }
+
+    height: 90vh;
+    width: 80vw;
+    background-color: $box-background;
+    @extend %box-style;
+    font-size: 1vw;
+
+    h2 {
+        font-size: 1.2vw;
+    }
+
+    header {
+        @include font('Exo 2');
+        grid-area: 1 / 2 / 1 span / 3 span;
+        font-size: 2.2vw;
+        color: $header-text;
+        margin: auto auto;
+        border-bottom: 2px solid $inp-border;
+    }
+
+    .grad-preview {
+        grid-area: 1 / 1 / 2 span / 1 span;
+        @include flexgrid(flex, center, center);
+        @include font('Cabin');
+
+        .grad {
+            height: 90%;
+            width: 90%;
+            @extend %box-style;
+            @include flexgrid(flex, center, center);
+        }
+
+        .grad-css {
+            background: $css-bg;
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 1.5vw;
+
+            span {
+                font-size: 1.4vw;
+                margin: auto auto;
+            }
+        }
+    }
+
+    .preferences {
+        @include flexgrid(flex, space-around, flex-start);
+        @include font('Cabin');
+        grid-area: 2 / 2 / 1 span / 1 span;
+        flex-flow: column;
+        color: $text;
+
+        .rgba input,
+        .grad-pref input {
+            margin: 1vh 1vw;
+            text-align: center;
+        }
+    }
+
+    .buttons {
+        grid-area: 3 / 1 / 1 span / 3 span;
+        @include flexgrid(flex, center, center);
+
+        .btn {
+            width: 10vw;
+            height: 5vh;
+            font-size: 1vw;
+            color: $btn-text;
+            background: $btn-bg;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+            margin: 0 10px;
+            font-family: 'Cabin';
+
+            &:hover {
+                background-blend-mode: multiply;
+            }
+        }
+    }
+}
+
+.input {
+    height: 4vh;
+    width: 6vw;
+    border: 3px solid $inp-border;
+    border-radius: 20px;
+    margin-left: 1vw;
+    transition: all 0.1s ease-in;
+    font-size: 1rem;
+
+
+    &:focus {
+        border-color: $inp-select;
+        outline: none;
+    }
+}
+
+.line {
+    @include line(1px, 10vw);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+    main {
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2% 55% 10% 33%;
+
+        header {
+            grid-area: 1 / 1 / 1 span / 2 span;
+            font-size: 2vh;
+        }
+
+        .grad-preview {
+            grid-area: 2 / 1 / 1 span / 2 span;
+
+            .grad-css {
+
+                span {
+                    font-size: 1.9vw;
+                    margin: auto auto;
+                }
+            }
+        }
+
+        .preferences {
+            grid-area: 4 / 1 / 1 span / 2 span;
+            font-size: 2vh;
+            @include flexgrid(flex, space-around, center);
+            flex-flow: row;
+
+            .rgba h2,
+            .grad-pref h2 {
+                font-size: 2vh;
+            }
+        }
+
+        .buttons {
+            grid-area: 3 / 1 / 1 span / 2 span;
+
+            .btn {
+                width: 20vw;
+                height: 7vh;
+                font-size: 2.5vh;
+            }
+        }
+
+        .input {
+            width: 15vw;
+        }
+    }
+
+
+}

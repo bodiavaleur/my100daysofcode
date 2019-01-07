@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500|Exo+2:500" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/index.js"></script>
+    <title>Gradient Generator</title>
+</head>
+
+<body>
+    <main>
+        <header>GRADIENT GENERATOR</header>
+        <div class="grad-preview">
+            <div class="grad" id="gradbox">
+                <div class="grad-css hidden" id="css-text">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="preferences">
+            <div class="rgba">
+                <h2>COLORS</h2>
+                <canvas class='line'></canvas>
+                <div class="red-pref">
+                    R: <input type="number" min="0" max="255" class="input" name="red">
+                </div>
+                <div class="green-pref">
+                    G: <input type="number" min="0" max="255" class="input" name="green">
+                </div>
+                <div class="blue-pref">
+                    B: <input type="number" min="0" max="255" class="input" name="blue">
+                </div>
+                <div class="alpha-pref">
+                    A: <input type="number" min="0" max="100" step="1" class="input" name="alpha">
+                </div>
+            </div>
+            <div class="grad-pref">
+                <h2>PREFERENCES</h2>
+                <canvas class='line'></canvas>
+                <div class="angle-pref">
+                    Angle: <input type="number" min="0" max="360" class="input" name="angle">
+                </div>
+                <div class="width-pref">
+                    Width: <input type="number" min="0" max="50" class="input" name="width">
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id='btn-roll' class='btn'>Roll it!</button>
+            <button id='btn-getcode' class='btn'>Get CSS</button>
+        </div>
+    </main>
+</body>
+
+</html>

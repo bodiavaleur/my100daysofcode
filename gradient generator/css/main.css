@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main, main .grad-preview .grad {
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 30px 5px #b0b0b0;
+          box-shadow: 0 0 30px 5px #b0b0b0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15% 75% 10%;
+      grid-template-rows: 15% 75% 10%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  height: 90vh;
+  width: 80vw;
+  background-color: #ffffff;
+  font-size: 1vw;
+}
+
+main h2 {
+  font-size: 1.2vw;
+}
+
+main header {
+  font-family: "Exo 2", Arial, Helvetica, sans-serif;
+  grid-area: 1 / 2 / 1 span / 3 span;
+  font-size: 2.2vw;
+  color: #939393;
+  margin: auto auto;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+main .grad-preview {
+  grid-area: 1 / 1 / 2 span / 1 span;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+}
+
+main .grad-preview .grad {
+  height: 90%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grad-preview .grad-css {
+  background: #ffffff70;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 1.5vw;
+}
+
+main .grad-preview .grad-css span {
+  font-size: 1.4vw;
+  margin: auto auto;
+}
+
+main .preferences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Cabin", Arial, Helvetica, sans-serif;
+  grid-area: 2 / 2 / 1 span / 1 span;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  color: #222222;
+}
+
+main .preferences .rgba input,
+main .preferences .grad-pref input {
+  margin: 1vh 1vw;
+  text-align: center;
+}
+
+main .buttons {
+  grid-area: 3 / 1 / 1 span / 3 span;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .buttons .btn {
+  width: 10vw;
+  height: 5vh;
+  font-size: 1vw;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7791fd), to(#4f28ff));
+  background: linear-gradient(180deg, #7791fd 0%, #4f28ff 100%);
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  font-family: 'Cabin';
+}
+
+main .buttons .btn:hover {
+  background-blend-mode: multiply;
+}
+
+.input {
+  height: 4vh;
+  width: 6vw;
+  border: 3px solid #e6e6e6;
+  border-radius: 20px;
+  margin-left: 1vw;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  font-size: 1rem;
+}
+
+.input:focus {
+  border-color: #5f9fff;
+  outline: none;
+}
+
+.line {
+  height: 1px;
+  width: 10vw;
+  background-color: #ccc;
+  border-radius: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    height: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 2% 55% 10% 33%;
+        grid-template-rows: 2% 55% 10% 33%;
+  }
+  main header {
+    grid-area: 1 / 1 / 1 span / 2 span;
+    font-size: 2vh;
+  }
+  main .grad-preview {
+    grid-area: 2 / 1 / 1 span / 2 span;
+  }
+  main .grad-preview .grad-css span {
+    font-size: 1.9vw;
+    margin: auto auto;
+  }
+  main .preferences {
+    grid-area: 4 / 1 / 1 span / 2 span;
+    font-size: 2vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  main .preferences .rgba h2,
+  main .preferences .grad-pref h2 {
+    font-size: 2vh;
+  }
+  main .buttons {
+    grid-area: 3 / 1 / 1 span / 2 span;
+  }
+  main .buttons .btn {
+    width: 20vw;
+    height: 7vh;
+    font-size: 2.5vh;
+  }
+  main .input {
+    width: 15vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */
