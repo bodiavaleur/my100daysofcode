@@ -162,7 +162,7 @@ class AirsalesList extends React.Component {
         return (
             <div className="row bg-white p-4 ml-4 mb-4 rounded" id="avs_root">
                 <div className="col-3 border-right">
-                    <img src="../img/ta_logo.svg" className="img-fluid mb-3"></img>
+                    <img src="img/ta_logo.svg" className="img-fluid mb-3"></img>
                     <button className="btn btn-primary">
                         Купить <br /> за {this.props.price}{this.props.currency()}
                     </button>
@@ -173,7 +173,7 @@ class AirsalesList extends React.Component {
                             <h3>{this.props.departure_time}</h3>
                             <div className="d-flex flex-column">
                                 <span className="avs_stops">{this.props.stops ? `${this.props.stops} ПЕРЕСАДКИ` : ''}</span>
-                                <img src="../img/fly.svg" className="img-fluid"></img>
+                                <img src="img/fly.svg" className="img-fluid"></img>
                             </div>
                             <h3>{this.props.arrival_time}</h3>
                         </div>
